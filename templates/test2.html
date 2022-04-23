@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Template Mo">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <title>Aery</title>
+
+    <!-- Bootstrap core CSS -->
+    <link type="text/css" href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrapp.min.css') }}" rel="stylesheet">
+
+
+    <!-- Additional CSS Files -->
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='assets/css/fontawesome.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='assets/css/webpage.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/owl.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='assets/css/lightbox.css') }}"> 
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/questionnaires.css') }}">
+
+
+  </head>
+
+<body>
+
+   
+
+  <!-- Sub Header -->
+  <div class="sub-header">
+    <div class="containerr">
+      <div class="row">
+        <div class="col-lg-8 col-sm-8">
+          <div class="left-content">
+            <p>An Intelligent Data Analysis of Students Learning Style, Academic Achievements and Interest in Recommending Academic Tracks.</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-4">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky">
+      <div class="containerr">
+          <div class="row">
+              <div class="col-12">
+                  <nav class="main-nav">
+                      <!-- ***** Logo Start ***** -->
+                      <a href="/" class="logo">
+                          AERY
+                      </a>
+                      <!-- ***** Logo End ***** -->
+                      <!-- ***** Menu Start ***** -->
+                      <ul class="nav">
+                        <li><a href="/">Home</a></li>
+                        <li class="has-sub">
+                        <a href="javascript:void(0)">Strand</a>
+                        <ul class="sub-menu">
+                            <li><a href="/stem">STEM</a></li>
+                            <li><a href="/abm">ABM</a></li>
+                            <li><a href="/humms">HUMMS</a></li>
+                            <li><a href="/gas">GAS</a></li>
+                        </ul> 
+                       <!-- <li class="scroll-to-section"><a href="#apply">Apply Now</a></li> --> 
+                        <li class="has-sub">
+                          <a href="javascript:void(0)">Account</a>
+                          <ul class="sub-menu">
+                              <li><a href="/profile">Profile</a></li>
+                              <li><a href="/aery/logout">Logout</a></li>
+                          </ul> 
+                    </ul>       
+                      <a class='menu-trigger'>
+                          <span>Menu</span>
+                      </a>
+                      <!-- ***** Menu End ***** -->
+                  </nav>
+              </div>
+          </div>
+      </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+
+  <section class="heading-page header-text" id="top">
+    <div class="containerr">
+      <div class="roww">
+        <div class="col-lg-12">
+          <h2>QUESTIONNAIRES</h2>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="meetings-page" id="meetings">
+    <div class="container">
+      <div class="roww">
+        <div class="col-lg-12">
+          <div class="roww">
+            <div class="col-lg-12">
+              <div class="meeting-single-item">
+             
+                <div class="down-content">
+                  <div class="containerr">
+                    <form action="/action_page.php">
+
+ <!--QUESTIONAIIRES FOR GRADES-->
+                      <div class="roww">
+                        <center><h2>ACADEMIC GRADES (ACADEMIC ACHIEVEMENTS)</h2></center><br>
+                        <div class="col-225">
+                          <label for="total2"><b>What is your grade in Mathematics?</b></label><br>
+                        </div>
+                        <div class="col-775">
+                          <input type="text" id="checks" name="checks" placeholder="NOTE: Remember your answer here..">
+                        </div>
+                      </div>
+
+                      <div class="roww">
+                        <div class="col-225">
+                          <label for="total2"><b>What is your grade in Science?</b></label><br>
+                        </div>
+                        <div class="col-775">
+                          <input type="text" id="checks" name="checks" placeholder="NOTE: Remember your answer here..">
+                        </div>
+                      </div>
+
+                      <div class="roww">
+                        <div class="col-225">
+                          <label for="total2"><b>What is your grade in English?</b></label><br>
+                        </div>
+                        <div class="col-775">
+                          <input type="text" id="checks" name="checks" placeholder="NOTE: Remember your answer here..">
+                        </div>
+                      </div>
+
+                      <div class="roww">
+                        <div class="col-225">
+                          <label for="total2"><b>What is your grade in Social-Science?</b></label><br>
+                        </div>
+                        <div class="col-775">
+                          <input type="text" id="checks" name="checks" placeholder="NOTE: Remember your answer here..">
+                        </div>
+                      </div>
+                      <br>
+
+                    </form>
+                  </div>
+                </div>
+
+                
+  <br>
+                        <div class="roww">
+                          <input type="submit" value="Submit">
+                        </div>
+                      </form>
+                    </div>
+                    </div>
+
+
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-12">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <p>A.E.R.Y.</p>
+    </div>
+  </section>
+
+
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+
+    <script src="{{ url_for('static', filename='vendor/jquery/jquery.min.js') }}"></script> 
+    <script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script> 
+
+    <script src="{{ url_for('static', filename='assets/js/isotope.min.js') }}"></script> 
+    <script src="{{ url_for('static', filename='assets/js/lightbox.js') }}"></script> 
+    <script src="{{ url_for('static', filename='assets/js/tabs.js') }}"></script> 
+    <script src="{{ url_for('static', filename='assets/js/video.js') }}"></script> 
+    <script src= "{{ url_for('static', filename='assets/js/slick-slider.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/custom.js') }}"></script>
+    <script>
+      
+        //according to loftblog tut
+        $('.nav li:first').addClass('active');
+
+        var showSection = function showSection(section, isAnimate) {
+          var
+          direction = section.replace(/#/, ''),
+          reqSection = $('.section').filter('[data-section="' + direction + '"]'),
+          reqSectionPos = reqSection.offset().top - 0;
+
+          if (isAnimate) {
+            $('body, html').animate({
+              scrollTop: reqSectionPos },
+            800);
+          } else {
+            $('body, html').scrollTop(reqSectionPos);
+          }
+
+        };
+
+        var checkSection = function checkSection() {
+          $('.section').each(function () {
+            var
+            $this = $(this),
+            topEdge = $this.offset().top - 80,
+            bottomEdge = topEdge + $this.height(),
+            wScroll = $(window).scrollTop();
+            if (topEdge < wScroll && bottomEdge > wScroll) {
+              var
+              currentId = $this.data('section'),
+              reqLink = $('a').filter('[href*=\\#' + currentId + ']');
+              reqLink.closest('li').addClass('active').
+              siblings().removeClass('active');
+            }
+          });
+        };
+
+        $('.main-menu, .responsive-menu, .scroll-to-section').on('click', 'a', function (e) {
+          e.preventDefault();
+          showSection($(this).attr('href'), true);
+        });
+
+        $(window).scroll(function () {
+          checkSection();
+        });
+    </script>
+</body>
+
+
+  </body>
+
+</html>
