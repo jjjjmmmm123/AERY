@@ -20,19 +20,26 @@
 
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='assets/css/fontawesome.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='assets/css/webpage.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/owl.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='assets/css/owl.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='assets/css/lightbox.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/questionnaires.css') }}">
 
 
 </head>
 
+<script>
+    function handleForm() {
+        alert('tangina mo')
+        return false;
+    }
+</script>
+
 <body>
 
 
 <!-- Sub Header -->
 <div class="sub-header">
-    <div class="containerr">
+    <div>
         <div class="row">
             <div class="col-lg-8 col-sm-8">
                 <div class="left-content">
@@ -48,7 +55,7 @@
 
 <!-- ***** Header Area Start ***** -->
 <header class="header-area header-sticky">
-    <div class="containerr">
+    <div>
         <div class="row">
             <div class="col-12">
                 <nav class="main-nav">
@@ -88,9 +95,9 @@
 <!-- ***** Header Area End ***** -->
 
 <section class="heading-page header-text" id="top">
-    <div class="containerr">
-        <div class="roww">
-            <div class="col-lg-12">
+    <div>
+        <div>
+            <div>
                 <h2>QUESTIONNAIRES</h2>
             </div>
         </div>
@@ -99,18 +106,18 @@
 
 <section class="meetings-page" id="meetings">
     <div class="container">
-        <div class="roww">
-            <div class="col-lg-12">
-                <div class="roww">
-                    <div class="col-lg-12">
+        <div>
+            <div>
+                <div>
+                    <div>
                         <div class="meeting-single-item">
 
                             <div class="down-content">
-                                <div class="containerr">
-                                    <form action="/action_page.php">
+                                <div>
+                                    <form>
 
                                         <!--QUESTIONNAIRES FOR LOGICAL-MATHEMATICAL-->
-                                        <div class="roww">
+                                        <div>
                                             <center><h2>MULTIPLE INTELLIGENCES (LEARNING STYLE)</h2></center>
                                             <div class="col-225">
                                                 <label for="linguistic"><b>LINGUISTIC</b></label><br>
@@ -120,66 +127,67 @@
                                             <div class="col-775">
                                                 <label for="ling"><b>If you experience any of these below, check the
                                                     box.</b></label><br>
-                                                <label class="containerr"> <input class="check_linguistic"
-                                                                                  type="checkbox">
+                                                <label> <input class="check_linguistic"
+                                                               type="checkbox">
                                                     <span class="checkmark"></span>I enjoy reading different kinds of
                                                     materials.
                                                 </label><br>
 
-                                                <label class="containerr"> <input class="check_linguistic"
-                                                                                  type="checkbox">
+                                                <label> <input class="check_linguistic"
+                                                               type="checkbox">
                                                     <span class="checkmark"></span>I enjoy playing word games and
                                                     puzzles.
                                                 </label><br>
 
-                                                <label class="containerr"> <input class="check_linguistic"
-                                                                                  type="checkbox">
+                                                <label> <input class="check_linguistic"
+                                                               type="checkbox">
                                                     <span class="checkmark"></span>I am able to write poems or stories.
                                                 </label><br>
 
-                                                <label class="containerr"> <input class="check_linguistic"
-                                                                                  type="checkbox">
+                                                <label> <input class="check_linguistic"
+                                                               type="checkbox">
                                                     <span class="checkmark"></span>I enjoy using multimedia resources
                                                     when learning.
                                                 </label><br>
 
-                                                <label class="containerr"> <input class="check_linguistic"
-                                                                                  type="checkbox">
+                                                <label> <input class="check_linguistic"
+                                                               type="checkbox">
                                                     <span class="checkmark"></span>I am able to memorize quite a lot of
                                                     information.
                                                 </label><br>
 
-                                                <label class="containerr"><input class="check_linguistic"
-                                                                                 type="checkbox">
+                                                <label><input class="check_linguistic"
+                                                              type="checkbox">
                                                     <span class="checkmark"></span>I am good at debating or giving
                                                     speeches.
                                                 </label><br>
 
-                                                <label class="containerr"><input class="check_linguistic"
-                                                                                 type="checkbox">
+                                                <label><input class="check_linguistic"
+                                                              type="checkbox">
                                                     <span class="checkmark"></span>I have or wish to have a career as a
                                                     journalist or lawyer.
                                                 </label><br>
 
-                                                <label class="containerr"> <input class="check_linguistic"
-                                                                                  type="checkbox">
+                                                <label> <input class="check_linguistic"
+                                                               type="checkbox">
                                                     <span class="checkmark"></span>I find it easy to explain things to
                                                     other people.
                                                 </label><br>
                                             </div>
                                         </div>
 
-                                        <div class="roww">
+                                        <div>
                                             <div class="col-225">
                                                 <label for="checks">How many checks for linguistic?</label>
                                             </div>
                                             <div class="col-775">
-                                                <input type="text" id="linguistic_count" disabled name="checks" placeholder="">
+                                                <input type="text" id="linguistic_count" disabled name="checks"
+                                                       placeholder="" value=0>
                                             </div>
                                         </div>
 
                                         <!--QUESTIONNAIRES FOR LOGICAL-MATHEMATICAL-->
-                                        <div class="roww">
+                                        <div>
                                             <div class="col-225">
                                                 <label for="logical"><b>LOGICAL-MATHEMATICAL</b></label><br>
                                             </div>
@@ -187,116 +195,118 @@
                                             <div class="col-775">
                                                 <label for="log"><b>If you experience any of these below, check the
                                                     box.</b></label><br>
-                                                <label class="containerr"> <input class="check_logical" type="checkbox">
+                                                <label> <input class="check_logical" type="checkbox">
                                                     <span class="checkmark"></span>I have always been good at math and
                                                     solving problems.
                                                 </label><br>
 
-                                                <label class="containerr"> <input class="check_logical" type="checkbox">
+                                                <label> <input class="check_logical" type="checkbox">
                                                     <span class="checkmark"></span>People say I am quite logical in my
                                                     actions.
                                                 </label><br>
 
-                                                <label class="containerr"> <input class="check_logical" type="checkbox">
+                                                <label> <input class="check_logical" type="checkbox">
                                                     <span class="checkmark"></span>I like to learn through research and
                                                     logic.
                                                 </label><br>
 
-                                                <label class="containerr"> <input class="check_logical" type="checkbox">
+                                                <label> <input class="check_logical" type="checkbox">
                                                     <span class="checkmark"></span>I reason deductively and like to
                                                     analyze everything.
                                                 </label><br>
 
-                                                <label class="containerr"> <input class="check_logical" type="checkbox">
+                                                <label> <input class="check_logical" type="checkbox">
                                                     <span class="checkmark"></span>I have or wish to have a career as a
                                                     scientist or mathematician.
                                                 </label><br>
 
-                                                <label class="containerr"><input class="check_logical" type="checkbox">
+                                                <label><input class="check_logical" type="checkbox">
                                                     <span class="checkmark"></span>I am good at solving complex
                                                     computations.
                                                 </label><br>
 
-                                                <label class="containerr"><input class="check_logical" type="checkbox">
+                                                <label><input class="check_logical" type="checkbox">
                                                     <span class="checkmark"></span>I enjoy thinking about abstract
                                                     ideas.
                                                 </label><br>
 
-                                                <label class="containerr"> <input class="check_logical" type="checkbox">
+                                                <label> <input class="check_logical" type="checkbox">
                                                     <span class="checkmark"></span>I am able to keep track and work with
                                                     numbers.
                                                 </label><br>
                                             </div>
                                         </div>
 
-                                        <div class="roww">
+                                        <div>
                                             <div class="col-225">
                                                 <label for="checks">How many checks for logical-mathematical?</label>
                                             </div>
                                             <div class="col-775">
-                                                <input type="text" id="logical_count" disabled name="checks" placeholder="">
+                                                <input type="text" id="logical_count" disabled name="checks"
+                                                       placeholder="" value=0>
                                             </div>
                                         </div>
 
                                         <!--QUESTIONNAIRES FOR SPATIAL-->
-                                        <div class="roww">
+                                        <div>
                                             <div class="col-225">
                                                 <label for="spatial"><b>SPATIAL</b></label><br>
                                             </div>
 
                                             <div class="col-775">
-                                                <label for="spa"><b>If you experience any of these below, check the
+                                                <label for="spatial"><b>If you experience any of these below, check the
                                                     box.</b></label><br>
-                                                <label class="containerr"> <input class="check_spatial" type="checkbox">
+                                                <label> <input class="check_spatial" type="checkbox">
                                                     <span class="checkmark"></span>I am good at interpreting art.
                                                 </label><br>
 
-                                                <label class="containerr"> <input class="check_spatial" type="checkbox">
+                                                <label> <input class="check_spatial" type="checkbox">
                                                     <span class="checkmark"></span>I have or wish to have a career as an
                                                     architect or engineer.
                                                 </label><br>
 
-                                                <label class="containerr"> <input class="check_spatial" type="checkbox">
+                                                <label> <input class="check_spatial" type="checkbox">
                                                     <span class="checkmark"></span>I have spatial thinking and can draw
                                                     perspectives.
                                                 </label><br>
 
-                                                <label class="containerr"> <input class="check_spatial" type="checkbox">
+                                                <label> <input class="check_spatial" type="checkbox">
                                                     <span class="checkmark"></span>I am extremely good at map reading.
                                                 </label><br>
 
-                                                <label class="containerr"> <input class="check_spatial" type="checkbox">
+                                                <label> <input class="check_spatial" type="checkbox">
                                                     <span class="checkmark"></span>I enjoy learning through charts and
                                                     statistics.
                                                 </label><br>
 
-                                                <label class="containerr"><input class="check_spatial" type="checkbox">
+                                                <label><input class="check_spatial" type="checkbox">
                                                     <span class="checkmark"></span>I am good at putting puzzles
                                                     together.
                                                 </label><br>
 
-                                                <label class="containerr"><input class="check_spatial" type="checkbox">
+                                                <label><input class="check_spatial" type="checkbox">
                                                     <span class="checkmark"></span>I enjoy drawing and painting.
                                                 </label><br>
 
-                                                <label class="containerr"> <input class="check_spatial"type="checkbox">
+                                                <label> <input class="check_spatial" type="checkbox">
                                                     <span class="checkmark"></span>I find it easier to express myself
                                                     through images and videos.
                                                 </label><br>
                                             </div>
                                         </div>
 
-                                        <div class="roww">
+                                        <div>
                                             <div class="col-225">
                                                 <label for="checks">How many checks for spatial?</label>
                                             </div>
                                             <div class="col-775">
-                                                <input type="text" id="spatial_count" disabled name="checks" placeholder="">
+                                                <input type="text" id="spatial_count" disabled name="checks"
+                                                       placeholder="" value=0>
                                             </div>
                                         </div>
 
                                         <!--QUESTIONNAIRES FOR BODILY-KINESTHETIC-->
-                                        <div class="roww">
+                                        <div>
                                             <div class="col-225">
                                                 <label for="bodily"><b>BODILY-KINESTHETIC</b></label><br>
                                             </div>
@@ -304,57 +314,58 @@
                                             <div class="col-775">
                                                 <label for="bod"><b>If you experience any of these below, check the
                                                     box.</b></label><br>
-                                                <label class="containerr"> <input class="check_bodily" type="checkbox">
+                                                <label> <input class="check_bodily" type="checkbox">
                                                     <span class="checkmark"></span>I am very good at dancing.
                                                 </label><br>
 
-                                                <label class="containerr"> <input class="check_bodily" type="checkbox">
+                                                <label> <input class="check_bodily" type="checkbox">
                                                     <span class="checkmark"></span>I find it easy to learn new steps or
                                                     new sports.
                                                 </label><br>
 
-                                                <label class="containerr"> <input class="check_bodily" type="checkbox">
+                                                <label> <input class="check_bodily" type="checkbox">
                                                     <span class="checkmark"></span>I have or wish to have a career as a
                                                     dancer or actor.
                                                 </label><br>
 
-                                                <label class="containerr"> <input class="check_bodily" type="checkbox">
+                                                <label> <input class="check_bodily" type="checkbox">
                                                     <span class="checkmark"></span>I enjoy creating things with my
                                                     hands.
                                                 </label><br>
 
-                                                <label class="containerr"> <input class="check_bodily" type="checkbox">
+                                                <label> <input class="check_bodily" type="checkbox">
                                                     <span class="checkmark"></span>I have excellent hand eye
                                                     coordination.
                                                 </label><br>
 
-                                                <label class="containerr"><input class="check_bodily" type="checkbox">
+                                                <label><input class="check_bodily" type="checkbox">
                                                     <span class="checkmark"></span>I have a good physical control and
                                                     strength.
                                                 </label><br>
 
-                                                <label class="containerr"><input class="check_bodily" type="checkbox">
+                                                <label><input class="check_bodily" type="checkbox">
                                                     <span class="checkmark"></span>I prefer to communicate through body
                                                     language.
                                                 </label><br>
 
-                                                <label class="containerr"> <input class="check_bodily" type="checkbox">
+                                                <label> <input class="check_bodily" type="checkbox">
                                                     <span class="checkmark"></span>I enjoy role playing.
                                                 </label><br>
                                             </div>
                                         </div>
 
-                                        <div class="roww">
+                                        <div>
                                             <div class="col-225">
                                                 <label for="checks">How many checks for bodily-kinesthetic?</label>
                                             </div>
                                             <div class="col-775">
-                                                <input type="text" id="bodily_count" disabled name="checks" placeholder="">
+                                                <input type="text" id="bodily_count" disabled name="checks"
+                                                       placeholder="" value=0>
                                             </div>
                                         </div>
 
                                         <!--QUESTIONNAIRES FOR MUSICAL-->
-                                        <div class="roww">
+                                        <div>
                                             <div class="col-225">
                                                 <label for="musical"><b>MUSICAL</b></label><br>
                                             </div>
@@ -362,57 +373,58 @@
                                             <div class="col-775">
                                                 <label for="music"><b>If you experience any of these below, check the
                                                     box.</b></label><br>
-                                                <label class="containerr"> <input class="check_musical" type="checkbox">
+                                                <label> <input class="check_musical" type="checkbox">
                                                     <span class="checkmark"></span>I can recognize a wide range of
                                                     sounds.
                                                 </label><br>
 
-                                                <label class="containerr"> <input class="check_musical" type="checkbox">
+                                                <label> <input class="check_musical" type="checkbox">
                                                     <span class="checkmark"></span>I can recognize, describe and
                                                     reproduce different toned.
                                                 </label><br>
 
-                                                <label class="containerr"> <input class="check_musical" type="checkbox">
+                                                <label> <input class="check_musical" type="checkbox">
                                                     <span class="checkmark"></span>I have or wish to have a career as a
                                                     musician or teacher.
                                                 </label><br>
 
-                                                <label class="containerr"> <input class="check_musical" type="checkbox">
+                                                <label> <input class="check_musical" type="checkbox">
                                                     <span class="checkmark"></span>I am sensible to rhythm changes.
                                                 </label><br>
 
-                                                <label class="containerr"> <input class="check_musical" type="checkbox">
+                                                <label> <input class="check_musical" type="checkbox">
                                                     <span class="checkmark"></span>I study better with music in the
                                                     background.
                                                 </label><br>
 
-                                                <label class="containerr"><input class="check_musical" type="checkbox">
+                                                <label><input class="check_musical" type="checkbox">
                                                     <span class="checkmark"></span>I know how to play a musical
                                                     instrument.
                                                 </label><br>
 
-                                                <label class="containerr"><input class="check_musical" type="checkbox">
+                                                <label><input class="check_musical" type="checkbox">
                                                     <span class="checkmark"></span>I am good at remembering songs and
                                                     tunes.
                                                 </label><br>
 
-                                                <label class="containerr"> <input class="check_musical" type="checkbox">
+                                                <label> <input class="check_musical" type="checkbox">
                                                     <span class="checkmark"></span>I can speak rhythmically.
                                                 </label><br>
                                             </div>
                                         </div>
 
-                                        <div class="roww">
+                                        <div>
                                             <div class="col-225">
                                                 <label for="checks">How many checks for musical?</label>
                                             </div>
                                             <div class="col-775">
-                                                <input type="text" id="musical_count" disabled name="checks" placeholder="">
+                                                <input type="text" id="musical_count" disabled name="checks"
+                                                       placeholder="" value=0>
                                             </div>
                                         </div>
 
                                         <!--QUESTIONNAIRES FOR INTERPERSONAL-->
-                                        <div class="roww">
+                                        <div>
                                             <div class="col-225">
                                                 <label for="interpersonal"><b>INTERPERSONAL</b></label><br>
                                             </div>
@@ -420,55 +432,64 @@
                                             <div class="col-775">
                                                 <label for="inter"><b>If you experience any of these below, check the
                                                     box.</b></label><br>
-                                                <label class="containerr"> <input class="check_interpersonal" type="checkbox">
+                                                <label> <input class="check_interpersonal"
+                                                               type="checkbox">
                                                     <span class="checkmark"></span>I can easily mix with other people.
                                                 </label><br>
 
-                                                <label class="containerr"> <input class="check_interpersonal" type="checkbox">
+                                                <label> <input class="check_interpersonal"
+                                                               type="checkbox">
                                                     <span class="checkmark"></span>I am good at talking to different
                                                     kinds of people.
                                                 </label><br>
 
-                                                <label class="containerr"> <input class="check_interpersonal" type="checkbox">
+                                                <label> <input class="check_interpersonal"
+                                                               type="checkbox">
                                                     <span class="checkmark"></span>I enjoy and do not fear social
                                                     speaking.
                                                 </label><br>
 
-                                                <label class="containerr"> <input class="check_interpersonal" type="checkbox">
+                                                <label> <input class="check_interpersonal"
+                                                               type="checkbox">
                                                     <span class="checkmark"></span>I have or wish to have a career as a
                                                     psychologist, philosopher or counselor.
                                                 </label><br>
 
-                                                <label class="containerr"> <input class="check_interpersonal" type="checkbox">
+                                                <label> <input class="check_interpersonal"
+                                                               type="checkbox">
                                                     <span class="checkmark"></span>I usually create positive first
                                                     impressions.
                                                 </label><br>
 
-                                                <label class="containerr"><input class="check_interpersonal" type="checkbox">
+                                                <label><input class="check_interpersonal"
+                                                              type="checkbox">
                                                     <span class="checkmark"></span>I am good at resolving conflicts.
                                                 </label><br>
 
-                                                <label class="containerr"><input class="check_interpersonal" type="checkbox">
+                                                <label><input class="check_interpersonal"
+                                                              type="checkbox">
                                                     <span class="checkmark"></span>I am a great motivator.
                                                 </label><br>
 
-                                                <label class="containerr"> <input class="check_interpersonal" type="checkbox">
+                                                <label> <input class="check_interpersonal"
+                                                               type="checkbox">
                                                     <span class="checkmark"></span>I can read people quite easily.
                                                 </label><br>
                                             </div>
                                         </div>
 
-                                        <div class="roww">
+                                        <div>
                                             <div class="col-225">
                                                 <label for="checks">How many checks for interpersonal?</label>
                                             </div>
                                             <div class="col-775">
-                                                <input type="text" id="interpersonal_count" disabled name="checks" placeholder="">
+                                                <input type="text" id="interpersonal_count" disabled name="checks"
+                                                       placeholder="" value=0>
                                             </div>
                                         </div>
 
                                         <!--QUESTIONNAIRES FOR INTRAPERSONAL-->
-                                        <div class="roww">
+                                        <div>
                                             <div class="col-225">
                                                 <label for="intrapersonal"><b>INTRAPERSONAL</b></label><br>
                                             </div>
@@ -476,58 +497,67 @@
                                             <div class="col-775">
                                                 <label for="intra"><b>If you experience any of these below, check the
                                                     box.</b></label><br>
-                                                <label class="containerr"> <input class="check_intrapersonal" type="checkbox">
+                                                <label> <input class="check_intrapersonal"
+                                                               type="checkbox">
                                                     <span class="checkmark"></span>I am aware and in control of my
                                                     emotions.
                                                 </label><br>
 
-                                                <label class="containerr"> <input class="check_intrapersonal" type="checkbox">
+                                                <label> <input class="check_intrapersonal"
+                                                               type="checkbox">
                                                     <span class="checkmark"></span>I have or wish to have a career as a
                                                     philosopher, writer or scientist.
                                                 </label><br>
 
-                                                <label class="containerr"> <input class="check_intrapersonal"type="checkbox">
+                                                <label> <input class="check_intrapersonal"
+                                                               type="checkbox">
                                                     <span class="checkmark"></span>I can easily analyze theories.
                                                 </label><br>
 
-                                                <label class="containerr"> <input class="check_intrapersonal" type="checkbox">
+                                                <label> <input class="check_intrapersonal"
+                                                               type="checkbox">
                                                     <span class="checkmark"></span>I am completely self- aware at most
                                                     times.
                                                 </label><br>
 
-                                                <label class="containerr"> <input class="check_intrapersonal" type="checkbox">
+                                                <label> <input class="check_intrapersonal"
+                                                               type="checkbox">
                                                     <span class="checkmark"></span>I created myself a system of
                                                     motivations and coping mechanisms.
                                                 </label><br>
 
-                                                <label class="containerr"><input class="check_intrapersonal" type="checkbox">
+                                                <label><input class="check_intrapersonal"
+                                                              type="checkbox">
                                                     <span class="checkmark"></span>I have moment of introspection and
                                                     self analysis.
                                                 </label><br>
 
-                                                <label class="containerr"><input class="check_intrapersonal" type="checkbox">
+                                                <label><input class="check_intrapersonal"
+                                                              type="checkbox">
                                                     <span class="checkmark"></span>I often find myself dreaming with the
                                                     eyes open.
                                                 </label><br>
 
-                                                <label class="containerr"> <input class="check_intrapersonal" type="checkbox">
+                                                <label> <input class="check_intrapersonal"
+                                                               type="checkbox">
                                                     <span class="checkmark"></span>I enjoy exploring the relationships I
                                                     have with other people.
                                                 </label><br>
                                             </div>
                                         </div>
 
-                                        <div class="roww">
+                                        <div>
                                             <div class="col-225">
                                                 <label for="checks">How many checks for intrapersonal?</label>
                                             </div>
                                             <div class="col-775">
-                                                <input type="text" id="intrapersonal_count" disabled name="checks" placeholder="">
+                                                <input type="text" id="intrapersonal_count" disabled name="checks"
+                                                       placeholder="" value=0>
                                             </div>
                                         </div>
 
                                         <!--QUESTIONNAIRES FOR NATURALIST-->
-                                        <div class="roww">
+                                        <div>
                                             <div class="col-225">
                                                 <label for="naturalist"><b>NATURALIST</b></label><br>
                                             </div>
@@ -535,99 +565,132 @@
                                             <div class="col-775">
                                                 <label for="natural"><b>If you experience any of these below, check the
                                                     box.</b></label><br>
-                                                <label class="containerr"> <input class="check_naturalist" type="checkbox">
+                                                <label> <input class="check_naturalist"
+                                                               type="checkbox">
                                                     <span class="checkmark"></span>I am a protector and lover of nature
                                                     and animals.
                                                 </label><br>
 
-                                                <label class="containerr"> <input class="check_naturalist" type="checkbox">
+                                                <label> <input class="check_naturalist"
+                                                               type="checkbox">
                                                     <span class="checkmark"></span>I enjoy reading about the
                                                     environment.
                                                 </label><br>
 
-                                                <label class="containerr"> <input class="check_naturalist" type="checkbox">
+                                                <label> <input class="check_naturalist"
+                                                               type="checkbox">
                                                     <span class="checkmark"></span>I have or wish to have a career as a
                                                     biologist or gardener.
                                                 </label><br>
 
-                                                <label class="containerr"> <input class="check_naturalist" type="checkbox">
+                                                <label> <input class="check_naturalist"
+                                                               type="checkbox">
                                                     <span class="checkmark"></span>I am completely aware of global
                                                     warming and pollution.
                                                 </label><br>
 
-                                                <label class="containerr"> <input class="check_naturalist" type="checkbox">
+                                                <label> <input class="check_naturalist"
+                                                               type="checkbox">
                                                     <span class="checkmark"></span>I am interested in botany and
                                                     biology.
                                                 </label><br>
 
-                                                <label class="containerr"><input class="check_naturalist" type="checkbox">
+                                                <label><input class="check_naturalist"
+                                                              type="checkbox">
                                                     <span class="checkmark"></span>I have plants that I care for.
                                                 </label><br>
 
-                                                <label class="containerr"><input class="check_naturalist" type="checkbox">
+                                                <label><input class="check_naturalist"
+                                                              type="checkbox">
                                                     <span class="checkmark"></span>I enjoy going hiking or simply
                                                     exploring the outdoors.
                                                 </label><br>
 
-                                                <label class="containerr"> <input class="check_naturalist" type="checkbox">
+                                                <label> <input class="check_naturalist"
+                                                               type="checkbox">
                                                     <span class="checkmark"></span>I can study better when in open
                                                     spaces.
                                                 </label><br>
                                             </div>
                                         </div>
 
-                                        <div class="roww">
+                                        <div>
                                             <div class="col-225">
                                                 <label for="checks">How many checks for naturalist?</label>
                                             </div>
                                             <div class="col-775">
-                                                <input type="text" id="naturalist_count" disabled name="checks" placeholder="">
+                                                <input type="text" id="naturalist_count" disabled name="checks"
+                                                       placeholder="" value=0>
                                             </div>
                                         </div>
 
                                         <!--TOP 3 INTELLIGENCE-->
-                                        <div class="roww">
+                                        <div>
                                             <div class="col-225">
                                                 <label for="naturalist"><b>Select your top three (3) scores by checking
                                                     the boxes below.</b></label><br>
                                             </div>
 
                                             <div class="col-775">
-                                                <label class="containerr"> <input type="checkbox">
+                                                <label> <input type="checkbox" class="learning-style"
+                                                               id="linguistic_id">
                                                     <span class="checkmark"></span>LINGUISTIC
-                                                </label> <input type="text" id="linguistic" disabled name="checks" placeholder=""><br>
+                                                </label> <input type="text" id="linguistic" disabled name="checks"
+                                                                placeholder="" value=0><br>
 
-                                                <label class="containerr"> <input type="checkbox">
+                                                <label> <input type="checkbox" class="learning-style"
+                                                               id="logical-mathematical_id">
                                                     <span class="checkmark"></span>LOGICAL-MATHEMATICAL
-                                                </label> <input type="text" id="logical" disabled name="checks" placeholder=""><br>
+                                                </label> <input type="text" id="logical" disabled name="checks"
+                                                                placeholder="" value=0><br>
 
-                                                <label class="containerr"> <input type="checkbox">
-                                                    <span class="checkmark"></span>SPATIAL 
-                                                </label><input type="text" id="spatial" disabled name="checks" placeholder=""><br>
+                                                <label> <input type="checkbox" class="learning-style" id="spatial_id">
+                                                    <span class="checkmark"></span>SPATIAL
+                                                </label><input type="text" id="spatial" disabled name="checks"
+                                                               placeholder="" value=0><br>
 
-                                                <label class="containerr"> <input type="checkbox">
+                                                <label> <input type="checkbox" class="learning-style"
+                                                               id="bodily-kinesthetic_id">
                                                     <span class="checkmark"></span>BODILY-KINESTHETIC
-                                                </label> <input type="text" id="bodily" disabled name="checks" placeholder=""><br>
+                                                </label> <input type="text" id="bodily" disabled name="checks"
+                                                                placeholder="" value=0><br>
 
-                                                <label class="containerr"> <input type="checkbox">
-                                                    <span class="checkmark"></span>MUSICAL   
-                                                </label><input type="text" id="musical" disabled name="checks" placeholder=""><br>
+                                                <label> <input type="checkbox" class="learning-style" id="musical_id">
+                                                    <span class="checkmark"></span>MUSICAL
+                                                </label><input type="text" id="musical" disabled name="checks"
+                                                               placeholder="" value=0><br>
 
-                                                <label class="containerr"><input type="checkbox">
-                                                    <span class="checkmark"></span>INTERPERSONAL 
-                                                </label> <input type="text" id="interpersonal" disabled name="checks" placeholder=""><br>
+                                                <label><input type="checkbox" class="learning-style"
+                                                              id="interpersonal_id">
+                                                    <span class="checkmark"></span>INTERPERSONAL
+                                                </label> <input type="text" id="interpersonal" disabled name="checks"
+                                                                placeholder="" value=0><br>
 
-                                                <label class="containerr"><input type="checkbox">
-                                                    <span class="checkmark"></span>INTRAPERSONAL           
-                                                </label> <input type="text" id="intrapersonal" disabled name="checks" placeholder=""><br>
+                                                <label><input type="checkbox" class="learning-style"
+                                                              id="intrapersonal_id">
+                                                    <span class="checkmark"></span>INTRAPERSONAL
+                                                </label> <input type="text" id="intrapersonal" disabled name="checks"
+                                                                placeholder="" value=0><br>
 
-                                                <label class="containerr"> <input type="checkbox">
-                                                    <span class="checkmark"></span>NATURALIST    
-                                                </label><input type="text" id="naturalist" disabled name="checks" placeholder=""><br>
+                                                <label> <input type="checkbox" class="learning-style"
+                                                               id="naturalist_id">
+                                                    <span class="checkmark"></span>NATURALIST
+                                                </label><input type="text" id="naturalist" disabled name="checks"
+                                                               placeholder="" value=0><br>
                                             </div>
-                                            <div class="roww">
-                                              <input type="submit" value="Submit">
-                                          </div>
+                                            <div class="d-flex py-4 justify-content-end">
+                                                <div class="alert alert-warning alert-dismissible fade in">
+                                                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                                                    <strong>Warning!</strong> This alert box could indicate a warning
+                                                    that might need attention.
+                                                </div>
+                                                <div>
+                                                    <input type="button" id="form-submit" onclick="handleForm()"
+                                                           value="Submit">
+                                                </div>
+
+                                            </div>
+
                                         </div>
 
                                         <br>
@@ -638,8 +701,8 @@
 
 
                             <br>
-                           
-                           
+
+
                         </div>
                     </div>
 
@@ -647,7 +710,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-12">
+        <div>
         </div>
     </div>
     </div>
@@ -663,18 +726,17 @@
 <!-- Bootstrap core JavaScript -->
 
 <script src="{{ url_for('static', filename='vendor/jquery/jquery.min.js') }}"></script>
-<script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+<script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrapp.min.js') }}"></script>
 
-<script src="{{ url_for('static', filename='assets/js/isotope.min.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/js/isotope.js') }}"></script>
 <script src="{{ url_for('static', filename='assets/js/lightbox.js') }}"></script>
 <script src="{{ url_for('static', filename='assets/js/tabs.js') }}"></script>
-<script src="{{ url_for('static', filename='assets/js/video.js') }}"></script>
 <script src="{{ url_for('static', filename='assets/js/slick-slider.js') }}"></script>
 <script src="{{ url_for('static', filename='assets/js/custom.js') }}"></script>
 <script>
 
     //according to loftblog tut
-    $('.nav li:first').addClass('active');
+    $('.nav li:first').addClass('active')
 
     var showSection = function showSection(section, isAnimate) {
         var
@@ -719,77 +781,119 @@
     });
 
     $(document).ready(function () {
+
+        let scores = {
+            "linguistic": 0,
+            "spatial": 0,
+            "logical-mathematical": 0,
+            "bodily-kinesthetic": 0,
+            "interpersonal": 0,
+            "musical": 0,
+            "intrapersonal": 0,
+            "naturalist": 0,
+        };
+
+        let sortedScore = [];
+
+        function sortScores() {
+            let entries = Object.values(scores);
+            sortedScore = entries.sort().reverse().slice(0, 3);
+        }
+
+        function checkTopThree(learningStyleScore) {
+            if(sortedScore.includes(learningStyleScore)){
+                return true
+            }
+            return false
+        }
+
         $('.check_linguistic').on('change', function () {
-            console.log("hello")
-            let linguistic_total = $('input.check_linguistic:checked').length;
+            linguistic_total = $('input.check_linguistic:checked').length;
             $("#linguistic_count").val(linguistic_total);
+            $("#linguistic").val(linguistic_total);
+            scores["linguistic"] = linguistic_total;
+            sortScores();
         });
 
-    });
-
-    $(document).ready(function () {
         $('.check_logical').on('change', function () {
-            console.log("hello")
             let logical_total = $('input.check_logical:checked').length;
             $("#logical_count").val(logical_total);
+            $("#logical").val(logical_total);
+            scores["logical-mathematical"] = logical_total;
+            sortScores();
         });
 
-    });
-
-    $(document).ready(function () {
         $('.check_spatial').on('change', function () {
-            console.log("hello")
             let spatial_total = $('input.check_spatial:checked').length;
             $("#spatial_count").val(spatial_total);
+            $("#spatial").val(spatial_total);
+            scores["spatial"] = spatial_total;
+            sortScores();
         });
 
-    });
-
-    $(document).ready(function () {
         $('.check_bodily').on('change', function () {
-            console.log("hello")
             let bodily_total = $('input.check_bodily:checked').length;
             $("#bodily_count").val(bodily_total);
+            $("#bodily").val(bodily_total);
+            scores["bodily-kinesthetic"] = bodily_total;
+            sortScores();
         });
 
-    });
-
-    $(document).ready(function () {
         $('.check_musical').on('change', function () {
-            console.log("hello")
             let musical_total = $('input.check_musical:checked').length;
             $("#musical_count").val(musical_total);
+            $("#musical").val(musical_total);
+            scores["musical"] = musical_total;
+            sortScores();
         });
 
-    });
-    
-    $(document).ready(function () {
         $('.check_interpersonal').on('change', function () {
-            console.log("hello")
             let interpersonal_total = $('input.check_interpersonal:checked').length;
             $("#interpersonal_count").val(interpersonal_total);
+            $("#interpersonal").val(interpersonal_total);
+            scores["interpersonal"] = interpersonal_total;
+            sortScores();
         });
 
-    });
-
-    $(document).ready(function () {
         $('.check_intrapersonal').on('change', function () {
-            console.log("hello")
             let intrapersonal_total = $('input.check_intrapersonal:checked').length;
             $("#intrapersonal_count").val(intrapersonal_total);
+            $("#intrapersonal").val(intrapersonal_total);
+            scores["intrapersonal"] = intrapersonal_total;
+            sortScores();
         });
 
-    });
-
-    $(document).ready(function () {
         $('.check_naturalist').on('change', function () {
-            console.log("hello")
             let naturalist_total = $('input.check_naturalist:checked').length;
             $("#naturalist_count").val(naturalist_total);
+            $("#naturalist").val(naturalist_total);
+            scores["naturalist"] = naturalist_total;
+            sortScores();
         });
 
+
+        $('.learning-style').on('click', function () {
+
+            let parent_id = $(this).attr('id').split("_")[0]
+
+            if (!checkTopThree(scores[parent_id])) {
+                return false;
+            }
+
+            if ($(this).prop('checked') === true) {
+                const index = sortedScore.indexOf(scores[parent_id]);
+                if (index > -1) {
+                    sortedScore.splice(index, 1); // 2nd parameter means remove one item only
+                }
+            } else {
+                sortedScore.push(scores[parent_id])
+            }
+        });
+
+
     });
-    
+
+
 </script>
 </body>
 
