@@ -44,6 +44,10 @@ def login():
             # Account doesnt exist or email/password incorrect
             msg = 'Incorrect email/password!'
     # Show the login form with message (if any)
+    if 'loggedin' in session:
+        # User is loggedin show them the home page
+        return render_template('home.html', username=session['email'])
+    # User is not loggedin redirect to login page
     return render_template('login.html', msg=msg)
 
 @app.route('/aery/logout')
@@ -51,7 +55,7 @@ def logout():
     # Remove session data, this will log the user out
    session.pop('loggedin', None)
    session.pop('id', None)
-   session.pop('username', None)
+   session.pop('email', None)
    # Redirect to login page
    return redirect(url_for('login'))
 
@@ -107,39 +111,75 @@ def create():
 
 @app.route('/stem')
 def stem():
-    return render_template('stem-page.html')
+    if 'loggedin' in session:
+        # User is loggedin show them the home page
+        return render_template('stem-page.html', username=session['email'])
+    # User is not loggedin redirect to login page
+    return redirect(url_for('login'))
    
 @app.route('/abm')
 def abm():
-    return render_template('abm-page.html')
+    if 'loggedin' in session:
+        # User is loggedin show them the home page
+        return render_template('abm-page.html', username=session['email'])
+    # User is not loggedin redirect to login page
+    return redirect(url_for('login'))
 
 @app.route('/humms')
 def humms():
-    return render_template('humms-page.html')
+    if 'loggedin' in session:
+        # User is loggedin show them the home page
+        return render_template('humms-page.html', username=session['email'])
+    # User is not loggedin redirect to login page
+    return redirect(url_for('login'))
 
 @app.route('/gas')
 def gas():
-    return render_template('gas-page.html')
+    if 'loggedin' in session:
+        # User is loggedin show them the home page
+        return render_template('gas-page.html', username=session['email'])
+    # User is not loggedin redirect to login page
+    return redirect(url_for('login'))
 
 @app.route('/profile')
 def profile():
-    return render_template('profile.html')
+    if 'loggedin' in session:
+        # User is loggedin show them the home page
+        return render_template('profile.html', username=session['email'])
+    # User is not loggedin redirect to login page
+    return redirect(url_for('login'))
 
 @app.route('/test')
 def test():
-    return render_template('test.html')
+    if 'loggedin' in session:
+        # User is loggedin show them the home page
+        return render_template('test.html', username=session['email'])
+    # User is not loggedin redirect to login page
+    return redirect(url_for('login'))
 
 @app.route('/test2')
 def test2():
-    return render_template('test2.html')
+    if 'loggedin' in session:
+        # User is loggedin show them the home page
+        return render_template('test2.html', username=session['email'])
+    # User is not loggedin redirect to login page
+    return redirect(url_for('login'))
 
 @app.route('/test3')
 def test3():
-    return render_template('test3.html')
+    if 'loggedin' in session:
+        # User is loggedin show them the home page
+        return render_template('test3.html', username=session['email'])
+    # User is not loggedin redirect to login page
+    return redirect(url_for('login'))
     
 @app.route('/usr')
 def usr():
-    return render_template('profile.html')
+    if 'loggedin' in session:
+        # User is loggedin show them the home page
+        return render_template('profile.html', username=session['email'])
+    # User is not loggedin redirect to login page
+    return redirect(url_for('login'))
 
 if __name__ == "__main__":
     app.run(debug=True, host="0.0.0.0")
