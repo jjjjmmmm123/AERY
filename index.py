@@ -6,18 +6,18 @@ import re
 app = Flask(__name__)
 app.secret_key = "yey"
 
-#DB Connection
+# DB Connection
 # Enter your database connection details below
 app.config['MYSQL_HOST'] = 'localhost'
 app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = ''
+app.config['MYSQL_PASSWORD'] = 'password'
 app.config['MYSQL_DB'] = 'aery'
 
 # Intialize MySQL
 mysql = MySQL(app)
 
 
-#Load Records from database
+# Load Records from database
 @app.route('/aery/', methods=['GET', 'POST'])
 def login():
     # Output message if something goes wrong...
@@ -50,14 +50,16 @@ def login():
     # User is not loggedin redirect to login page
     return render_template('login.html', msg=msg)
 
+
 @app.route('/aery/logout')
 def logout():
     # Remove session data, this will log the user out
-   session.pop('loggedin', None)
-   session.pop('id', None)
-   session.pop('email', None)
-   # Redirect to login page
-   return redirect(url_for('login'))
+    session.pop('loggedin', None)
+    session.pop('id', None)
+    session.pop('email', None)
+    # Redirect to login page
+    return redirect(url_for('login'))
+
 
 @app.route('/aery/register', methods=['GET', 'POST'])
 def register():
@@ -86,11 +88,15 @@ def register():
             cursor.execute('INSERT INTO accounts VALUES (NULL, %s, %s, %s)', (username, password, email,))
             mysql.connection.commit()
             msg = 'You have successfully registered!'
+            return redirect(url_for('login'))
+
+
     elif request.method == 'POST':
         # Form is empty... (no POST data)
         msg = 'Please fill out the form!'
     # Show registration form with message (if any)
     return render_template('register.html', msg=msg)
+
 
 @app.route('/aery/home')
 def home():
@@ -101,13 +107,21 @@ def home():
     # User is not loggedin redirect to login page
     return redirect(url_for('login'))
 
+
 @app.route('/')
 def index():
-    return render_template('index.html')
+    # Check if user is loggedin
+    if 'loggedin' in session:
+        # User is loggedin show them the home page
+        return render_template('home.html', username=session['email'])
+    # User is not loggedin redirect to login page
+    return redirect(url_for('login'))
+
 
 @app.route('/create')
 def create():
     return render_template('register.html')
+
 
 @app.route('/stem')
 def stem():
@@ -116,7 +130,8 @@ def stem():
         return render_template('stem-page.html', username=session['email'])
     # User is not loggedin redirect to login page
     return redirect(url_for('login'))
-   
+
+
 @app.route('/abm')
 def abm():
     if 'loggedin' in session:
@@ -124,6 +139,7 @@ def abm():
         return render_template('abm-page.html', username=session['email'])
     # User is not loggedin redirect to login page
     return redirect(url_for('login'))
+
 
 @app.route('/humms')
 def humms():
@@ -133,6 +149,7 @@ def humms():
     # User is not loggedin redirect to login page
     return redirect(url_for('login'))
 
+
 @app.route('/gas')
 def gas():
     if 'loggedin' in session:
@@ -140,6 +157,7 @@ def gas():
         return render_template('gas-page.html', username=session['email'])
     # User is not loggedin redirect to login page
     return redirect(url_for('login'))
+
 
 @app.route('/profile')
 def profile():
@@ -149,6 +167,7 @@ def profile():
     # User is not loggedin redirect to login page
     return redirect(url_for('login'))
 
+
 @app.route('/test')
 def test():
     if 'loggedin' in session:
@@ -156,6 +175,7 @@ def test():
         return render_template('test.html', username=session['email'])
     # User is not loggedin redirect to login page
     return redirect(url_for('login'))
+
 
 @app.route('/test2')
 def test2():
@@ -165,6 +185,7 @@ def test2():
     # User is not loggedin redirect to login page
     return redirect(url_for('login'))
 
+
 @app.route('/test3')
 def test3():
     if 'loggedin' in session:
@@ -172,7 +193,8 @@ def test3():
         return render_template('test3.html', username=session['email'])
     # User is not loggedin redirect to login page
     return redirect(url_for('login'))
-    
+
+
 @app.route('/usr')
 def usr():
     if 'loggedin' in session:
@@ -180,6 +202,52 @@ def usr():
         return render_template('profile.html', username=session['email'])
     # User is not loggedin redirect to login page
     return redirect(url_for('login'))
+
+
+@app.route('/slearning', methods=['GET', 'POST'])
+def save_learning():
+    if 'loggedin' in session:
+        learning_style = {
+            "0": "linguistic",
+            "1": "logical",
+            "2": "spatial",
+            "3": "bodily",
+            "4": "musical",
+            "5": "interpersonal",
+            "6": "intrapersonal",
+            "7": "naturalist",
+
+        }
+
+        if request.method == 'POST':
+            checked = request.form.getlist("result_checked")
+            cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+            cursor.execute('INSERT INTO learning_style VALUES (NULL, %s, %s, %s, %s)', (
+                session['id'], learning_style[checked[0]], learning_style[checked[1]], learning_style[checked[2]]))
+            mysql.connection.commit()
+
+        return redirect(url_for('test2'))
+    return redirect(url_for('login'))
+
+
+@app.route('/sacademic', methods=['GET', 'POST'])
+def save_academic():
+    if 'loggedin' in session:
+        print("first")
+
+        if request.method == 'POST' and "mathematics" in request.form and "science" in request.form and "english" in request.form and "social_science" in request.form:
+            mathematics = request.form.get("mathematics")
+            science = request.form.get("science")
+            english = request.form.get("english")
+            social_science = request.form.get("social_science")
+            cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+            cursor.execute('INSERT INTO academic VALUES (NULL, %s, %s, %s, %s, %s)', (
+                session['id'], mathematics, science, english, social_science))
+            mysql.connection.commit()
+
+        return redirect(url_for('test3'))
+    return redirect(url_for('login'))
+
 
 if __name__ == "__main__":
     app.run(debug=True, host="0.0.0.0")
