@@ -10,7 +10,7 @@ app.secret_key = "yey"
 # Enter your database connection details below
 app.config['MYSQL_HOST'] = 'localhost'
 app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = 'password'
+app.config['MYSQL_PASSWORD'] = ''
 app.config['MYSQL_DB'] = 'aery'
 
 # Intialize MySQL
@@ -227,6 +227,29 @@ def save_learning():
             mysql.connection.commit()
 
         return redirect(url_for('test2'))
+    return redirect(url_for('login'))
+
+@app.route('/sinterest', methods=['GET', 'POST'])
+def save_interest():
+    if 'loggedin' in session:
+        interest = {
+            "0": "realistic",
+            "1": "investigate",
+            "2": "artistic",
+            "3": "social",
+            "4": "enterprising",
+            "5": "conventional",
+            
+        }
+
+        if request.method == 'POST':
+            checked = request.form.getlist("result_checked")
+            cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+            cursor.execute('INSERT INTO interest VALUES (NULL, %s, %s, %s, %s)', (
+                session['id'], interest[checked[0]], interest[checked[1]], interest[checked[2]]))
+            mysql.connection.commit()
+
+        return redirect(url_for('profile'))
     return redirect(url_for('login'))
 
 
