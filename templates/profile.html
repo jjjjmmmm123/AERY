@@ -22,6 +22,36 @@
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='assets/css/lightbox.css') }}">
   </head>
 
+  <style>
+    table {
+      border-collapse: collapse;
+      border-spacing: 0;
+      width: 100%;
+      border: 1px solid #ddd;
+    }
+    
+    th, td {
+      text-align: left;
+      padding: 8px;
+    }
+    
+    tr:nth-child(even){background-color: #f2f2f2}
+
+    .button {
+    background-color: #a12c2f;
+    border: none;
+    color: white;
+    padding: 10px 27px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 50px;
+  }
+    </style>
+
 <body>
 
    
@@ -60,7 +90,7 @@
                         <ul class="sub-menu">
                             <li><a href="/stem">STEM</a></li>
                             <li><a href="/abm">ABM</a></li>
-                            <li><a href="/humms">HUMMS</a></li>
+                            <li><a href="/humms">HUMSS</a></li>
                             <li><a href="/gas">GAS</a></li>
                         </ul> 
                           <li class="has-sub">
@@ -100,7 +130,6 @@
             <div class="col-lg-12">
               <div class="filters">
                 <ul>
-                  <li data-filter="*"  class="active">Strand</li>
                   <li data-filter=".soon"><a href="/test">Learning Style</a></li>
                   <li data-filter=".imp"><a href="/test2">Academic Grades</a></li>
                   <li data-filter=".att"><a href="/test3">Interest</a></li>
@@ -108,6 +137,63 @@
               </div>
             </div>
           </div>
+
+  <!--RESULTS TABLE-->
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <div class="meeting-single-item">
+                      <div class="down-content">
+                        <h4>RESULTS OF YOUR TESTS</h4>
+
+                        <div style="overflow-x:auto;">
+                          <table>
+                            <tr>
+                              <th>LEARNING STYLE</th>
+                              <th>ACADEMIC ACHIEVEMENTS</th>
+                              <th>INTEREST</th>
+                            </tr>
+                            <tr>
+                              <td>...</td>
+                              <td>Mathematics: </td>
+                              <td>...</td>
+                            </tr>
+                            <tr>
+                              <td>...</td>
+                              <td>English: </td>
+                              <td>...</td>
+                            </tr>
+                            <tr>
+                              <td>...</td>
+                              <td>Science: </td>
+                              <td>...</td>    
+                            </tr>
+                            <tr>
+                              <td></td>
+                              <td>Social-Science: </td>
+                              <td></td>    
+                            </tr>
+                          </table>
+                        </div>
+
+                        <br>
+                       <center><input type="button" class="button" value="Generate"></center> <br><br>
+                        <h4>YOUR STRAND IS:</h4>  <input type="text" id="result" disabled name="checks"
+                        placeholder="">
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+  <!--RESULTS TABLE ENDS HERE-->
+
+
+
         </div>
       </div>
     </div>
